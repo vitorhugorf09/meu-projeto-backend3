@@ -27,17 +27,17 @@ export class Player {
 
 }
 
-// O método de takeDamage é um método que recebe um parâmetro de dano (amount) e não retorna nada (void).
+// O método de takeDamage é um método que recebe um parâmetro de dano (damage) e não retorna nada (void).
 // não retorna nada (void).
-    public takeDamage(amount: number): string {
-        this.health -= amount; // Reduz a saúde do jogador com base no dano recebido
+    public takeDamage(damage: number): string {
+        this.health -= damage; // Reduz a saúde do jogador com base no dano recebido
         if (this.health < 0) {
             this.health = 0; // Garante que a saúde não fique negativa
             return `${this.name} foi derrotado!`; // Retorna uma mensagem indicando que o jogador foi derrotado
         }
         
     
-    return `${this.name} recebeu ${amount} de dano e agora tem ${this.health} de saúde.`;
+    return `${this.name} recebeu ${damage} de dano e agora tem ${this.health} de saúde.`;
     }
 
 }
